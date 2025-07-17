@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block body %}
+<h1 class="text-body-emphasis">Welcome to the weather site</h1>
+<p class="col-lg-8 mx-auto fs-5 text-muted">
+        You can enter the name of the city and get weather information.
+    </p>
+{% endblock %}
+
+{% block form %}
+<p>City name: </p>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex" method="post"><input type="search"
+                                                                                   class="form-control form-control-dark text-bg-dark"
+                                                                                          name="city"
+
+                                                                                  >
+
+        </form>
+{% endblock %}

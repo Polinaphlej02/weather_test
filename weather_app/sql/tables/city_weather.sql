@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS city_weather
+(
+    id SERIAL PRIMARY KEY,
+    city_name VARCHAR(60) NOT NULL,
+    temp INTEGER NOT NULL,
+    weather VARCHAR(60) NOT NULL,
+    datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT now()
+)

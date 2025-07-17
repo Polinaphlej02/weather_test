@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Story
+{% endblock %}
+
+{% block body %}
+{% if weather_list %}
+{% for weather in weather_list %}
+<div class="card-body"><h3 class="card-title">{{ weather["city_name"] }} {{ weather["temp"] }}°C</h3>
+    <p class="card-text">{{ weather["weather"] }}</p>
+    <p class="card-text"><small class="text-body-secondary">{{ weather["datetime"].strftime("%Y-%m-%d %H:%M:%S") }}</small></p><br><br></div>
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Main
+{% endblock %}
+{% block form %}
+<p>City name: </p>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 d-flex" method="post"><input type="search"
+                                                                                   class="form-control form-control-dark text-bg-dark"
+                                                                                          name="city"
+
+                                                                                  >
+
+        </form>
+{% endblock %}
+{% block body %}
+
+
+
+
+    {% if weather %}
+    <h1 class="text-body-emphasis">{{ weather["city"] }}</h1>
+    <img src="{{ weather['icon_url'] }}" alt="mdo" width="100" height="100" class="rounded-circle">
+    <h1 class="text-body-emphasis">{{ weather["temp"] }}°C</h1>
+    <h4 class="text-body-emphasis">{{ weather["weather"] }}</h4>
+    <p class="col-lg-8 mx-auto fs-5 text-muted">
+        Humidity: {{ weather["humidity"] }}%
+    </p>
+{% else %}
+    <h1 class="text-body-emphasis">City not found</h1>
+{% endif %}
+
+
+
+{% endblock %}
